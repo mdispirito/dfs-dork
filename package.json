@@ -8,7 +8,7 @@
     "yalps": "^0.3.0"
   },
   "devDependencies": {
-    "typescript": "^4.9.4",
-    "@types/node": "^18.11.18"
+    "@types/node": "^18.14.0",
+    "typescript": "^4.9.5"
   }
 }
