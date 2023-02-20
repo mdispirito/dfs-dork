@@ -1,11 +1,11 @@
-import { IPlayerProjection } from "./IPlayerProjection.js"
+import { PlayerProjection } from "./PlayerProjection.js"
 
-export interface IPlayer {
+export type Player = {
     id: number,
     firstName: string,
     lastName: string,
     team: string,
     position: string
     salary: number
-    projection: IPlayerProjection
+    projection: PlayerProjection
 }

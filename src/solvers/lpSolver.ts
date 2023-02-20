@@ -1,2 +1,0 @@
-import { solve } from 'yalps';
-
