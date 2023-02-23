@@ -1,8 +1,8 @@
 import { Stat, StatProduction, StatProductionType } from "../types/FantasyStats.js";
 
 export class NBAStatSet {
-    productionType: StatProductionType
-    stats: Map<string, Stat>
+    readonly productionType: StatProductionType
+    readonly stats: Map<string, Stat>
 
     constructor(statProductionType: StatProductionType, statProduction: StatProduction) {
         this.productionType = statProductionType;

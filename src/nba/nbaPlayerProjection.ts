@@ -4,7 +4,7 @@ import { FantasyStatValueMap } from "../types/FantasyStats.js";
 import { StatProductionType } from "../types/FantasyStats.js";
 
 export class NBAPlayerProjection implements PlayerProjection {
-    fantasyPoints: number;
+    readonly fantasyPoints: number;
 
     constructor(statProjection: NBAStatSet, statValueMap: FantasyStatValueMap) {
 
@@ -15,7 +15,7 @@ export class NBAPlayerProjection implements PlayerProjection {
         this.fantasyPoints = this.getProjectedFantasyPoints(statProjection, statValueMap);
     }
 
-    public getProjectedFantasyPoints(statProjection: NBAStatSet, statValueMap: FantasyStatValueMap): number {
+    private getProjectedFantasyPoints(statProjection: NBAStatSet, statValueMap: FantasyStatValueMap): number {
         let totalFantasyPoints: number = 0;
 
         for (const [key, stat] of statProjection.stats) {
