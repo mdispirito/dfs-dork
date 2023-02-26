@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "tsc"
+  },
+  "type": "module",
+  "dependencies": {
+    "csv": "^6.2.6",
+    "yalps": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "typescript": "^4.9.5"
+  }
+}
