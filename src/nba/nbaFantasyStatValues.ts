@@ -1,4 +1,4 @@
-import { FantasyStatValueMap } from "../types/FantasyStats.js"
+import { FantasyStatValueMap } from "../interfaces/FantasyStats.js"
 
 // standard yahoo NBA DFS scoring
 export const YAHOO_NBA_DFS_STAT_MAP: FantasyStatValueMap = {

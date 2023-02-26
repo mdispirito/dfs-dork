@@ -1,5 +1,5 @@
 import { Player } from "./Player.js";
 
-export type PlayerPool = {
+export interface PlayerPool {
     availablePlayers: Map<number, Player>;
 }

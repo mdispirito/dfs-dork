@@ -4,13 +4,13 @@ export enum StatProductionType {
     PROJECTED
 }
 
-export type Stat = {
+export interface Stat {
     name: string,
     value: number,
     enabled: boolean
 }
 
-export type StatProduction = {
+export interface StatProduction {
     // the intention is that this is extended down the road with more stats
     PTS? : number,      // points
     REB? : number,      // rebounds
@@ -20,7 +20,7 @@ export type StatProduction = {
     TOV? : number       // turnovers
 }
 
-export type FantasyStatValueMap = {
+export interface FantasyStatValueMap {
     [index: string]: number | undefined
 
     // maps a real life statistic to its fantasy value

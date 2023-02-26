@@ -1,6 +1,6 @@
 import { NBAPlayerProjection } from "./nba/nbaPlayerProjection.js";
 import { NBAStatSet } from "./nba/nbaStatSet.js";
-import { StatProductionType } from "./types/FantasyStats.js";
+import { StatProductionType } from "./interfaces/FantasyStats.js";
 import { YAHOO_NBA_DFS_STAT_MAP } from "./nba/nbaFantasyStatValues.js";
 
 /**

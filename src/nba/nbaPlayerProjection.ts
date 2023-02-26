@@ -1,7 +1,7 @@
-import { PlayerProjection } from "../types/PlayerProjection.js";
+import { PlayerProjection } from "../interfaces/PlayerProjection.js";
 import { NBAStatSet } from "./nbaStatSet.js";
-import { FantasyStatValueMap } from "../types/FantasyStats.js";
-import { StatProductionType } from "../types/FantasyStats.js";
+import { FantasyStatValueMap } from "../interfaces/FantasyStats.js";
+import { StatProductionType } from "../interfaces/FantasyStats.js";
 
 export class NBAPlayerProjection implements PlayerProjection {
     readonly fantasyPoints: number;

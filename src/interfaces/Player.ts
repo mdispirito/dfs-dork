@@ -1,6 +1,6 @@
 import { PlayerProjection } from "./PlayerProjection.js"
 
-export type Player = {
+export interface Player {
     id: number,
     firstName: string,
     lastName: string,

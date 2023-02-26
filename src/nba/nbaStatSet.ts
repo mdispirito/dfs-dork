@@ -1,4 +1,4 @@
-import { Stat, StatProduction, StatProductionType } from "../types/FantasyStats.js";
+import { Stat, StatProduction, StatProductionType } from "../interfaces/FantasyStats.js";
 
 export class NBAStatSet {
     readonly productionType: StatProductionType
