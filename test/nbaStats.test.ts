@@ -1,7 +1,7 @@
-import { NBAStatSet } from "../../src/nba/nbaStatSet.js";
-import { StatProductionType } from "../../src/interfaces/FantasyStats.js";
-import { NBAPlayerProjection } from "../../src/nba/nbaPlayerProjection.js";
-import { YAHOO_NBA_DFS_STAT_MAP } from "../../src/nba/nbaFantasyStatValues.js";
+import { NBAStatSet } from "../src/nba/nbaStatSet.js";
+import { StatProductionType } from "../src/interfaces/FantasyStats.js";
+import { NBAPlayerProjection } from "../src/nba/nbaPlayerProjection.js";
+import { YAHOO_NBA_DFS_STAT_MAP } from "../src/nba/nbaFantasyStatValues.js";
 
 describe("NBA Stat Set", () => {
     it("should store all stats that are passed in", () => {
@@ -39,6 +39,6 @@ describe("NBA Player Projection", () => {
         });
 
         const westbrickSpecialFantasyOutput = new NBAPlayerProjection(westbrickSpecial, YAHOO_NBA_DFS_STAT_MAP);
-        expect(westbrickSpecialFantasyOutput).toBe(42.2);
+        expect(westbrickSpecialFantasyOutput.fantasyPoints).toBe(42.2);
     });
 });
