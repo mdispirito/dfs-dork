@@ -12,7 +12,7 @@ export interface NBADFSModelProps {
 export class NBADFSModel implements Model {
     direction: "maximize" | "minimize" | undefined = "maximize";
     objective: string;
-    constraints: { salary: { max: number }, availableRosterSpots: { max: number } };
+    constraints: { salary: { max: number }, rosterSpot: { max: number } };
     variables: Map<string, any>;
     binaries: boolean = true;
 
@@ -21,7 +21,7 @@ export class NBADFSModel implements Model {
         this.variables = props.variables;
         this.constraints = {
             salary: { max: props.salaryLimit },
-            availableRosterSpots: { max: props.maxAvailableRosterSpots }
+            rosterSpot: { max: props.maxAvailableRosterSpots }
         };
     }
 
