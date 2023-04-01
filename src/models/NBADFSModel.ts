@@ -1,4 +1,4 @@
-import { Model } from 'yalps';
+import { Coefficients, Model } from 'yalps';
 import { Solution } from 'yalps';
 import { solve } from 'yalps';
 
@@ -13,7 +13,7 @@ export class NBADFSModel implements Model {
     direction: "maximize" | "minimize" | undefined = "maximize";
     objective: string;
     constraints: { salary: { max: number }, rosterSpot: { max: number } };
-    variables: Map<string, any>;
+    variables: Map<string, Coefficients>;
     binaries: boolean = true;
 
     constructor(props: NBADFSModelProps) {
