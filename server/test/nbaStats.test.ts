@@ -1,7 +1,7 @@
-import { NBAStatSet } from "../src/nba/nbaStatSet.js";
-import { StatProductionType } from "../src/interfaces/FantasyStats.js";
-import { NBAPlayerProjection } from "../src/nba/nbaPlayerProjection.js";
-import { YAHOO_NBA_DFS_STAT_MAP } from "../src/nba/nbaFantasyStatValues.js";
+import { NBAStatSet } from "../nba/nbaStatSet.js";
+import { StatProductionType } from "../interfaces/FantasyStats.js";
+import { NBAPlayerProjection } from "../nba/nbaPlayerProjection.js";
+import { YAHOO_NBA_DFS_STAT_MAP } from "../nba/nbaFantasyStatValues.js";
 
 describe("NBA Stat Set", () => {
     it("should store all stats that are passed in", () => {
