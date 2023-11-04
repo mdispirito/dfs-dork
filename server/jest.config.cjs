@@ -2,7 +2,7 @@
 module.exports = {
   preset: 'ts-jest',
   roots: [
-    "<rootDir>/test"
+    "<rootDir>/server/test"
   ],
   extensionsToTreatAsEsm: [".ts"],
   moduleNameMapper: {

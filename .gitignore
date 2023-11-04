@@ -1,4 +1,7 @@
 node_modules/
 dist/
+cert/
 
 .DS_Store
+
+.env
