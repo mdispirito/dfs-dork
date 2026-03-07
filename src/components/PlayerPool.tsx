@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-import { fetchPlayers } from "../api/client";
 import type { Player } from "../types";
 
 interface Props {
-  contestId: string;
+  players: Player[];
   excludedPlayers: Set<string>;
   lockedPlayers: Set<string>;
   onToggleExclude: (name: string) => void;
@@ -15,27 +13,12 @@ function playerName(p: Player) {
 }
 
 export function PlayerPool({
-  contestId,
+  players,
   excludedPlayers,
   lockedPlayers,
   onToggleExclude,
   onToggleLock,
 }: Props) {
-  const [players, setPlayers] = useState<Player[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setLoading(true);
-    fetchPlayers(contestId)
-      .then(setPlayers)
-      .catch((e) => setError(e.message))
-      .finally(() => setLoading(false));
-  }, [contestId]);
-
-  if (loading) return <p className="text-gray-400">Loading players...</p>;
-  if (error) return <p className="text-red-400">Error: {error}</p>;
-
   return (
     <div>
       <h2 className="text-xl font-semibold mb-3">

@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
 import { ContestList } from "./components/ContestList";
+import { Header } from "./components/Header";
 import { PlayerPool } from "./components/PlayerPool";
 import { LineupOptimizer } from "./components/LineupOptimizer";
 import { fetchPlayers } from "./api/client";
@@ -46,7 +47,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">DFS Dork</h1>
+        <Header />
 
         {!contestId ? (
           <ContestList onSelectContest={handleSelectContest} />
@@ -66,7 +67,7 @@ function App() {
             />
 
             <PlayerPool
-              contestId={contestId}
+              players={players}
               excludedPlayers={excludedPlayers}
               lockedPlayers={lockedPlayers}
               onToggleExclude={toggleExclude}
