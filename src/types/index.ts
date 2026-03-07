@@ -21,6 +21,16 @@ export interface OptimizeRequest {
   player_pool: Player[];
   lineups: number;
   load_external_projections: boolean;
+  force_refresh_projections?: boolean;
   excluded_players: string[];
   locked_players: string[];
+}
+
+export interface AuthStatus {
+  authenticated: boolean;
+  user?: {
+    name?: string;
+    email?: string;
+    sub?: string;
+  };
 }
